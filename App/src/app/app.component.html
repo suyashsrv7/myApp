@@ -1,0 +1,51 @@
+<div class="container">
+  <h3>Examples</h3>
+  <hr>
+  <h6>#String Interpolation</h6>
+  <p>{{ textValue }}</p>
+  <!-- <img src="../assets/images/interpolation.png"/> -->
+  <hr>
+
+  <h6>#Property binding & Event Binding</h6>
+  <p>We can toggle the disable property of input box using control button.</p>
+  <div class="row">
+    <div class="col-md-4">
+        <button class="btn btn-primary btn-prop-bind" (click)="disableInput()">Control Button</button>
+    </div>
+    <div class="col-md-8">
+        <input class = "form-control" type="text" [disabled]="disableInputBox" [value]="boxValue"/>
+    </div>
+  </div>
+  <hr>
+
+  <h6>#Passing data with Event binding</h6>
+  <div class="row">
+    <div class="col-md-8">
+      <input type="text" class="form-control" (input)="updateGhostText($event)"/>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary btn-ghost" (click)="enableGhostText()">Toggle Ghost Text</button>
+    </div>
+  </div>
+  <div class="row ghost-textarea">
+    <div class="col-md-12">
+      <textarea name="" class="form-control" [value]="ghostTextVal" [disabled]="!ghostText"></textarea>
+    </div>
+  </div>
+  <hr>
+
+  <h6>#Two way data binding</h6>
+  <div class="row">
+    <div class="col-md-5">
+        <textarea name="" class="form-control" [(ngModel)]="twoWayBindVal"> </textarea>
+    </div>
+    <div class="col-md-2">
+        <span style='font-size:2rem; display: block; text-align: center;'>&#8646;</span>
+    </div>
+    <div class="col-md-5">
+      <textarea name="" class="form-control" [(ngModel)]="twoWayBindVal"></textarea>
+    </div>
+  </div>
+  <hr>
+
+</div>
