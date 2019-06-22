@@ -1,2 +1,2 @@
 # myApp
-Social media app
+Learn Angular with Examples
